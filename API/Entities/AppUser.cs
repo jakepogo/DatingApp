@@ -1,5 +1,6 @@
 namespace API.Entities
 {
+    // User Class will define how our user object will be stored (and the database AppUser)
     public class AppUser
     {
         public int Id { get; set; }

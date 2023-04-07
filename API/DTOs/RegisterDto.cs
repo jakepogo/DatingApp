@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace API.DTOs
 {
+    // Our Registration DTO (Data Trasfer Object) doesnt need everything our AppUser contains, only these properties
     public class RegisterDto
     {
         [Required]

@@ -9,7 +9,8 @@ namespace API.Extensions
         public static IServiceCollection AddIdentityServices(this IServiceCollection services,
             IConfiguration config)
         {
-            // Set up JWT token authentication
+            // Set up JWT token authentication, for now this is using Signing key only 
+            // to validate but should grow in future lessons
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {

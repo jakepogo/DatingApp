@@ -16,8 +16,8 @@ namespace API.Controllers
             _context = context;
         }
 
-        [AllowAnonymous]
-        [HttpGet]
+        [AllowAnonymous]// Overrides Authorize for the class (cannot be used vice versa)
+        [HttpGet]// Allows _GET method
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
         {
             var users = await _context.Users.ToListAsync();
@@ -25,7 +25,7 @@ namespace API.Controllers
             return users;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}")]// Allows _GET method with a passed in "id"
         public async Task<ActionResult<AppUser>> GetUser(int id)
         {
             return await _context.Users.FindAsync(id);

@@ -9,6 +9,7 @@ namespace API.Data
         {
         }
 
+        // Create a Users table, using the AppUser definition
         public DbSet<AppUser> Users {get; set; }
     }
 }

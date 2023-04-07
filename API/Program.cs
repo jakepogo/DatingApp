@@ -6,8 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+// to keep this file clean we are including files with extension mesthods 
+// in our extensions directory to perform our Service related tasks
 builder.Services.AddApplicationServices(builder.Configuration);
-
 builder.Services.AddIdentityServices(builder.Configuration);
 
 var app = builder.Build();
